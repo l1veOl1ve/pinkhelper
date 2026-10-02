@@ -1,3 +1,14 @@
+const tg = window.Telegram.WebApp;
+
+tg.ready();
+
+tg.expand();
+
+tg.setHeaderColor("#e9578b");
+
+tg.setBackgroundColor("#e9578b");
+
+
 const data = {
 
     au: [
