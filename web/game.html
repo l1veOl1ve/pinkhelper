@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="magazine-container">
+        <div class="header-bar">
+            <span>GAME DEV COMPANION</span>
+            <span id="user-status">AUTH REQUIRED</span>
+        </div>
+
+        <div class="hero-section">
+            <h1 class="hero-title">GAME WORKSPACE</h1>
+            <p class="hero-subtitle">Управление персонажами, сюжетом и кодом UE5/Blender</p>
+        </div>
+
+        <!-- Навигация -->
+        <div class="controls-section" style="flex-direction: row; border-top: 3px solid #000;">
+            <button class="tab-btn active" onclick="openTab('characters')">Персонажи</button>
+            <button class="tab-btn" onclick="openTab('plot')">Сюжет & Уровни</button>
+            <button class="tab-btn" onclick="openTab('ai')">AI Помощник</button>
+        </div>
+
+        <!-- Вкладка Персонажи -->
+        <div id="tab-characters" class="tab-content result-card">
+            <h3>Персонажи</h3>
+            <div id="characters-list">Загрузка...</div>
+            <textarea id="new-char-input" placeholder="Добавить персонажа (Имя: описание)..." rows="3" style="width:100%; border:2px solid #000; padding:8px; margin-top:10px;"></textarea>
+            <button class="generate-btn" style="margin-top:8px; padding:10px;" onclick="saveCharacter()">+ Сохранить персонажа</button>
+        </div>
+
+        <!-- Вкладка Сюжет -->
+        <div id="tab-plot" class="tab-content result-card hidden">
+            <h3>Текущий сюжет и прогресс</h3>
+            <textarea id="plot-text" rows="6" style="width:100%; border:2px solid #000; padding:8px;" placeholder="Опишите текущую логику уровня, сюжет и задачи..."></textarea>
+            <button class="generate-btn" style="margin-top:8px; padding:10px;" onclick="savePlot()">Обновить сюжет</button>
+        </div>
+
+        <!-- Вкладка AI Помощник -->
+        <div id="tab-ai" class="tab-content result-card hidden">
+            <h3>Задать вопрос AI (по сюжету или коду)</h3>
+            <div id="chat-history" style="max-height: 200px; overflow-y: auto; border: 2px solid #000; padding: 10px; background: #fff; margin-bottom: 10px;"></div>
+            <textarea id="ai-prompt" rows="3" style="width:100%; border:2px solid #000; padding:8px;" placeholder="Спроси про код UE5, C++, Blueprints или развивай сюжет..."></textarea>
+            <button class="generate-btn" style="margin-top:8px; padding:10px;" onclick="sendToAI()">Отправить в AI</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
