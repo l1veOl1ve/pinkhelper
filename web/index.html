@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fic Randomizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="top-bar">
+            <div class="logo">
+                ▣ FIC RANDOMIZER
+            </div>
+
+            <div class="version">
+                FANFIC IDEA GENERATOR
+            </div>
+        </header>
+
+
+        <section class="intro">
+
+            <div>
+                <h1>
+                    RANDOM<br>
+                    YOUR NEXT<br>
+                    STORY.
+                </h1>
+
+                <p>
+                    Mix tropes, fandoms, AUs and chaos.
+                </p>
+            </div>
+
+            <div class="pink-symbol">
+                ✦
+            </div>
+
+        </section>
+
+
+        <section class="generator">
+
+            <div class="field">
+                <label>AU</label>
+
+                <select id="au">
+                    <option value="random">ANY</option>
+                    <option>College AU</option>
+                    <option>Coffee Shop AU</option>
+                    <option>Fantasy AU</option>
+                    <option>Apocalypse AU</option>
+                    <option>Royalty AU</option>
+                    <option>Neighbors AU</option>
+                </select>
+            </div>
+
+
+            <div class="field">
+                <label>SIZE</label>
+
+                <select id="size">
+                    <option value="random">ANY</option>
+                    <option>Mini</option>
+                    <option>Midi</option>
+                    <option>Maxi</option>
+                </select>
+            </div>
+
+
+            <div class="field">
+                <label>FANDOM</label>
+
+                <select id="fandom">
+                    <option value="random">ANY</option>
+                    <option>Detroit: Become Human</option>
+                    <option>Fallout: New Vegas</option>
+                    <option>Batman</option>
+                    <option>Marvel</option>
+                    <option>Harry Potter</option>
+                    <option>Star Wars</option>
+                    <option>Original</option>
+                </select>
+            </div>
+
+
+            <div class="field">
+                <label>GENRE</label>
+
+                <select id="genre">
+                    <option value="random">ANY</option>
+                    <option>Romance</option>
+                    <option>Fluff</option>
+                    <option>Angst</option>
+                    <option>Comedy</option>
+                    <option>Drama</option>
+                    <option>Horror</option>
+                    <option>Mystery</option>
+                </select>
+            </div>
+
+
+            <div class="field">
+                <label>KINK</label>
+
+                <select id="kink">
+                    <option value="random">ANY</option>
+                    <option>Praise</option>
+                    <option>Jealousy</option>
+                    <option>Teasing</option>
+                    <option>Possessiveness</option>
+                    <option>Power Play</option>
+                </select>
+            </div>
+
+
+            <div class="field">
+                <label>TROPE</label>
+
+                <select id="trope">
+                    <option value="random">ANY</option>
+                    <option>Enemies to Lovers</option>
+                    <option>Friends to Lovers</option>
+                    <option>Strangers to Lovers</option>
+                    <option>Fake Dating</option>
+                    <option>Only One Bed</option>
+                    <option>Forced Proximity</option>
+                    <option>Slow Burn</option>
+                    <option>Mutual Pining</option>
+                </select>
+            </div>
+
+        </section>
+
+
+        <button id="randomize">
+            ✦ RANDOMIZE ✦
+        </button>
+
+
+        <section id="result" class="result hidden">
+
+            <div class="result-header">
+                YOUR NEXT FIC
+            </div>
+
+            <div id="result-content"></div>
+
+            <button id="again">
+                ↻ ANOTHER IDEA
+            </button>
+
+        </section>
+
+
+        <footer>
+            FIC RANDOMIZER / 2026
+        </footer>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
